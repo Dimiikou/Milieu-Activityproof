@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule ^add?$ add.php
+RewriteRule ^edit?$ edit.php
+RewriteRule ^remove?$ remove.php
+RewriteRule ^refreshNames?$ refreshNames.php

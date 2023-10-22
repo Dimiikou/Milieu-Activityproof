@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^add?$ add.php
+RewriteRule ^edit?$ edit.php
+RewriteRule ^get?$ get.php

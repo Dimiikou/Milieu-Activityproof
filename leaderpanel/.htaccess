@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteRule ^dashboard?$ dashboard.php
+RewriteRule ^editMinimumActivity?$ editMinimumActivity.php
+RewriteRule ^editAlliance?$ editAlliance.php
+
+RewriteRule ^editmember/([a-zA-Z0-9_]+) editmember.php?member=$1

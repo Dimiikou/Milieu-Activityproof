@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^addMoneyActivity?$ addMoneyActivity.php
+RewriteRule ^addDrugActivity?$ addDrugActivity.php
+RewriteRule ^addRoleplayActivity?$ addRoleplayActivity.php

@@ -1,0 +1,17 @@
+RewriteEngine on
+
+RewriteRule ^login?$ login.php
+RewriteRule ^logout?$ login.php?logout=$1
+RewriteRule ^index?$ index.php
+RewriteRule ^memberlist?$ memberlist.php
+RewriteRule ^editmember?$ editmember.php
+RewriteRule ^dashboard?$ dashboard.php
+RewriteRule ^addlogout?$ logout.php
+RewriteRule ^changepassword?$ changepassword.php
+RewriteRule ^activityproof?$ activityproof.php
+RewriteRule ^pfandnahmen?$ pfandNahmen.php
+RewriteRule ^punishments?$ punishments.php
+RewriteRule ^protectionMoney?$ protectionMoney.php
+RewriteRule ^meeting?$ meeting.php
+
+RewriteRule ^activityproof/([a-zA-Z0-9_]+) activityproof.php?member=$1

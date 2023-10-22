@@ -1,0 +1,531 @@
+/* https://ts3index.com/?lang=en&page=generator&sub=ascii */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --blue: #609fee;
+    --darkblue: #416ba1;
+    --lightgray: #d3d3d3;
+    --gray: #808080;
+    --darkgray: #2f2f2f;
+    --lightgreen: #00ad06;
+    --green: #135d09;
+    --red: #e43b3b;
+    --orange: #e46e3b;
+    --pink: #d93be4;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
+
+@keyframes comeIn {from {opacity: 0;} to {opacity: 100%;}}
+
+html {scroll-behavior: smooth;}
+
+body, h2, p {margin: 0;}
+
+body {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+
+/*
+==============================================================================================================
+ __     _____ ____  _____ ___
+ \ \   / /_ _|  _ \| ____/ _ \
+  \ \ / / | || | | |  _|| | | |
+   \ V /  | || |_| | |__| |_| |
+    \_/  |___|____/|_____\___/
+==============================================================================================================
+*/
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(40%) saturate(150%);
+}
+
+/*
+==============================================================================================================
+  ____  _   _ _____ _____ ___  _   _
+ | __ )| | | |_   _|_   _/ _ \| \ | |
+ |  _ \| | | | | |   | || | | |  \| |
+ | |_) | |_| | | |   | || |_| | |\  |
+ |____/ \___/  |_|   |_| \___/|_| \_|
+==============================================================================================================
+*/
+
+a button {
+    border: none;
+    border-radius: 1em;
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: var(--blue);
+    color: var(--darkgray);
+}
+
+a.link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    text-decoration-thickness: 3px;
+}
+
+a.link:hover {
+    text-decoration-color: #ffffff;
+    cursor: pointer;
+}
+
+.button-download {
+    margin: 20px 0;
+    padding: 10px 50px;
+    background-color: var(--blue);
+    color: white;
+}
+
+.button-download:hover {
+    background-color: var(--darkblue);
+    color: var(--lightgray);
+    cursor: pointer;
+}
+
+/*
+==============================================================================================================
+   ____ ____  ___ ____
+  / ___|  _ \|_ _|  _ \
+ | |  _| |_) || || | | |
+ | |_| |  _ < | || |_| |
+  \____|_| \_\___|____/
+==============================================================================================================
+*/
+
+.grid-center {text-align: center;}
+.grid-right {text-align: right;}
+.grid-a {grid-area: a;}
+.grid-b {grid-area: b;}
+.grid-c {grid-area: c;}
+.grid-d {grid-area: d;}
+.grid-e {grid-area: e;}
+.grid-f {grid-area: f;}
+
+/*
+==============================================================================================================
+  _   _    ___     __
+ | \ | |  / \ \   / /
+ |  \| | / _ \ \ / /
+ | |\  |/ ___ \ V /
+ |_| \_/_/   \_\_/
+==============================================================================================================
+*/
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.nav-child {
+    margin: 0 20px;
+    color: var(--lightgray);
+    text-decoration: none;
+}
+
+.nav-child-left {float: left;}
+.nav-child-right {float: right;}
+
+.nav-child-right:hover {
+    color: #ffffff;
+    text-decoration: underline var(--blue) 5px;
+    cursor: pointer;
+}
+
+/*
+==============================================================================================================
+  ___ _   _ ____  _______  __
+ |_ _| \ | |  _ \| ____\ \/ /
+  | ||  \| | | | |  _|  \  /
+  | || |\  | |_| | |___ /  \
+ |___|_| \_|____/|_____/_/\_\
+==============================================================================================================
+*/
+
+.index-main {
+    z-index: 1;
+    height: 68vh;
+}
+
+.index-main-content {
+    position: relative;
+    top: 25vh;
+    left: 10vw;
+    margin: 0;
+    box-sizing: border-box;
+    width: max-content;
+    color: white;
+}
+
+.index-main-content p {
+    margin: 0;
+    padding: 20px 0;
+    line-height: 1;
+}
+
+.index-statistic, .index-history, .footer {
+    position: relative;
+    z-index: 0;
+    box-shadow:
+            inset 0 12px 16px -10px black,
+            inset 0 -12px 16px -10px black;
+    padding: 50px 0;
+    background-color: var(--darkgray);
+}
+
+.index-history {
+    z-index: 1;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.index-statistic-grid, .index-history-grid, .banner-grid, .gangwar-grid, .dashboard-grid, .footer-grid {
+    position: relative;
+    display: grid;
+    margin: 0 10vw;
+    width: 80vw;
+    justify-content: space-between;
+    color: white;
+}
+
+.index-statistic-grid {
+    grid-template-columns: 500px 300px 300px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "a b c"
+        "d e f";
+}
+
+.index-history-grid {
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-template-areas:
+        "a b"
+        "c c";
+}
+
+.index-history-grid > div > img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 320px;
+    margin: auto;
+}
+
+@-webkit-keyframes moveUpDown {
+    0%   {top: 92vh;}
+    50%  {top: 90vh;}
+    100% {top: 92vh;}
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    top: 92vh;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 65px;
+    fill: white;
+    animation: moveUpDown 0.6s 3;
+}
+
+.arrow:hover {
+    fill: lightgray;
+}
+
+/*
+==============================================================================================================
+  ____  _   _ ____  ____   _    ____ _____ ____
+ / ___|| | | | __ )|  _ \ / \  / ___| ____/ ___|
+ \___ \| | | |  _ \| |_) / _ \| |  _|  _| \___ \
+  ___) | |_| | |_) |  __/ ___ \ |_| | |___ ___) |
+ |____/ \___/|____/|_| /_/   \_\____|_____|____/
+==============================================================================================================
+*/
+
+.wantedReasons, .housebans, .team, .banner, .gangwar, .dashboard {
+    position: relative;
+    min-height: 80vh;
+    margin: 10vh 10vw;
+    z-index: 0;
+}
+
+.wantedReasons > p, .housebans > p, .team > p, .banner > p, .dashboard > p {
+    margin: 25px 0;
+    color: white;
+}
+
+.wantedReasons-flexBar, .housebans-flexBar {
+    position: relative;
+    width: 80vw;
+    color: white;
+    display: flex;
+}
+
+.wantedReasons-flexBar {
+    justify-content: space-between;
+}
+
+.housebans-flexBar {
+    flex: 0 0 100;
+    align-items: center;
+    justify-content: center;
+}
+
+.housebans-flexBar-name {
+    align-content: center;
+    flex: 0 0 300px;
+}
+
+.housebans-flexBar-reason {
+    flex: 3;
+}
+
+.housebans-flexBar-date {
+    flex: 1;
+    text-align: right;
+}
+
+.housebans-flexBar > div {
+    width: max-content;
+}
+
+.team-group {
+    display: grid;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(64px, 100%/5)), 302px));
+    margin-bottom: 50px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.team-group-entry {
+    width: 250px;
+    max-height: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0, 0, 0.5);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.team-group-entry img {border-radius: 5px;}
+.team-group-entry.ceo {border: 1px solid var(--red);}
+.team-group-entry.dev {border: 1px solid var(--green);}
+.team-group-entry.mod {border: 1px solid var(--blue);}
+.team-group-entry.sup {border: 1px solid var(--orange);}
+.team-group-entry.bet {border: 1px solid var(--pink);}
+
+.banner-grid {
+    height: 100%;
+    margin: 0;
+    justify-content: stretch;
+    grid-template-columns: 300px auto 300px auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "a b c d"
+        "e e e e";
+}
+
+.gangwar-grid {
+    height: 100%;
+    margin: 0;
+    justify-content: stretch;
+    grid-template-columns: auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "a b c"
+        "d e f";
+}
+
+.banner-grid > .grid-b, .banner-grid > .grid-d {align-self: center;}
+
+/*
+==============================================================================================================
+   __             _       
+  / /  ___   __ _(_)_ __  
+ / /  / _ \ / _` | | '_ \ 
+/ /__| (_) | (_| | | | | |
+\____/\___/ \__, |_|_| |_|
+            |___/         
+==============================================================================================================
+*/
+
+.login-main {
+    z-index: 1;
+    height: 100vh;
+}
+
+.login-main-content {
+    position: relative;
+    top: 25vh;
+    margin: 0;
+    box-sizing: border-box;
+    width: max-content;
+    background-color: rgba(37,37,37, 0.5);
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    margin: auto;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+/*
+==============================================================================================================
+  /\/\   ___   __| | __ _| |
+ /    \ / _ \ / _` |/ _` | |
+/ /\/\ \ (_) | (_| | (_| | |
+\/    \/\___/ \__,_|\__,_|_|      
+==============================================================================================================
+*/
+
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+/*
+==============================================================================================================
+   _   _    _   _                  _                 _     
+  /_\ | | _| |_(_)_ __   __ _  ___| |____      _____(_)___ 
+ //_\\| |/ / __| | '_ \ / _` |/ __| '_ \ \ /\ / / _ \ / __|
+/  _  \   <| |_| | | | | (_| | (__| | | \ V  V /  __/ \__ \
+\_/ \_/_|\_\\__|_|_| |_|\__,_|\___|_| |_|\_/\_/ \___|_|___/
+                                                              
+==============================================================================================================
+*/
+
+.aktinachweis-main-content {
+    position: relative;
+    color: white;
+}
+
+/*
+==============================================================================================================
+  _____ ___   ___ _____ _____ ____
+ |  ___/ _ \ / _ \_   _| ____|  _ \
+ | |_ | | | | | | || | |  _| | |_) |
+ |  _|| |_| | |_| || | | |___|  _ <
+ |_|   \___/ \___/ |_| |_____|_| \_\
+==============================================================================================================
+*/
+
+.footer-grid {
+    grid-template-columns: 20vw repeat(4, 14vw);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    grid-template-areas:
+        "a b c d e"
+        "a f f f f";
+}
